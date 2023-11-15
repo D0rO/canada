@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingat ka Jerome</title>
+   
+    <style>
+       body {
+            margin: 0;
+            overflow: hidden;
+        }
+           #airplane {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 500px;
+            height: 300px;
+            transition: transform 10s linear;
+        }
+         
+           #title {
+            text-align: center;
+            padding: 40px;
+            background-color: #e73535;
+            color: #0e0d0d;
+        }  
+            
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h1>INGAT KA JEROME</h1>
+    </div>
+
+    <img id="airplane" src="ap.jpg" alt="Airplane Image">
+    <img id="canada" src="canada.jpg" alt="canada Image">
+    
+    
+   
+<script>
+        // Move the airplane using JavaScript
+        const airplane = document.getElementById('airplane');
+
+        function moveAirplane() {
+            const screenWidth = window.innerWidth;
+            airplane.style.transform = `translateX(${screenWidth}px)`;
+        }
+
+        // Call the moveAirplane function after the page loads
+        window.onload = function () {
+            moveAirplane();
+        };
+    </script>
+</body>
+</html>
